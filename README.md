@@ -25,3 +25,9 @@ La agenda guarda datos solo en el navegador; no sincroniza entre dispositivos.
 Correo: munozisabella523@gmail.com
 
 Celular: 323 968 4592
+
+## Repositorios de proyectos
+
+- [Promedio académico](https://github.com/munozisabella523-ctrl/promedio-academico): código completo de la práctica guiada.
+- [Agenda de estudio](https://github.com/munozisabella523-ctrl/agenda-de-estudio): código completo de la práctica guiada.
+- [Mundo Ciencia](https://github.com/munozisabella523-ctrl/mundo-ciencia): documentación; pendiente incorporar el código original del equipo.
