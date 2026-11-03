@@ -1,0 +1,373 @@
+/* ARCHIVO: css/adaptable.css
+ * ADAPTACIÓN A PANTALLAS PEQUEÑAS
+ * Las reglas @media se aplican cuando se cumple el ancho indicado.
+ * Dentro de cada bloque se ajustan las mismas clases de los estilos generales.
+ * El orden importa: una regla posterior puede completar o reemplazar una anterior.
+ */
+
+@media(max-width:1180px) {
+    /* Selector .top-nav: controla el encabezado y la navegación compartida. Se aplica solo dentro de esta condición. */
+    .top-nav {
+        /* Separa los elementos de la distribución. */
+        gap: 12px;
+        /* Ajusta el tamaño de la letra. */
+        font-size: .75rem
+    }
+
+    /* Selector .site-header: controla el encabezado y la navegación compartida. Se aplica solo dentro de esta condición. */
+    .site-header {
+        /* Separa los elementos de la distribución. */
+        gap: 15px;
+        /* Ajusta el espacio interior en el lado o eje indicado. */
+        padding-inline: 3%
+    }
+
+    /* Selector .top-nav .btn: controla el encabezado y la navegación compartida. Se aplica solo dentro de esta condición. */
+    .top-nav .btn {
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 10px 12px;
+        /* Ajusta el tamaño de la letra. */
+        font-size: .76rem
+    }
+}
+
+/* Adaptación de pantalla: (max-width:1000px). */
+@media(max-width:1000px) {
+    /* Selector .menu-toggle: controla el encabezado y la navegación compartida. Se aplica solo dentro de esta condición. */
+    .menu-toggle {
+        /* Define cómo se distribuye o se oculta el elemento. */
+        display: flex
+    }
+
+    /* Selector .top-nav: controla el encabezado y la navegación compartida. Se aplica solo dentro de esta condición. */
+    .top-nav {
+        /* Define cómo se distribuye o se oculta el elemento. */
+        display: none;
+        /* Define si sigue el flujo o se coloca respecto a otro contenedor o la pantalla. */
+        position: absolute;
+        /* Fija la distancia a los límites del contenedor o de la pantalla. */
+        top: 100%;
+        /* Fija la distancia a los límites del contenedor o de la pantalla. */
+        left: 0;
+        /* Fija la distancia a los límites del contenedor o de la pantalla. */
+        right: 0;
+        /* Define el fondo: color, imagen o combinación. */
+        background: white;
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 25px;
+        /* Añade profundidad mediante una sombra. */
+        box-shadow: var(--shadow);
+        /* Permite pasar elementos a otra fila. */
+        flex-wrap: wrap;
+        /* Ajusta el tamaño de la letra. */
+        font-size: .9rem
+    }
+
+    /* Selector .top-nav.open: controla el encabezado y la navegación compartida. Se aplica solo dentro de esta condición. */
+    .top-nav.open {
+        /* Define cómo se distribuye o se oculta el elemento. */
+        display: flex
+    }
+
+    /* Selector .top-nav .btn: controla el encabezado y la navegación compartida. Se aplica solo dentro de esta condición. */
+    .top-nav .btn {
+        /* Ajusta el tamaño de la letra. */
+        font-size: .85rem
+    }
+
+    /* Selector .stats-grid: controla los contadores y gráficos del panel. Se aplica solo dentro de esta condición. */
+    .stats-grid {
+        /* Define las columnas de la cuadrícula. */
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    /* Selector .project-grid: controla las tarjetas y los listados de experimentos. Se aplica solo dentro de esta condición. */
+    .project-grid {
+        /* Define las columnas de la cuadrícula. */
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+}
+
+/* Adaptación de pantalla: (max-width:700px). */
+@media(max-width:700px) {
+    /* Selector .container: controla la distribución de secciones y tarjetas. Se aplica solo dentro de esta condición. */
+    .container {
+        /* Establece el ancho. */
+        width: 90%;
+        /* Separa el elemento de los elementos exteriores. */
+        margin: 40px auto
+    }
+
+    /* Selector .site-header: controla el encabezado y la navegación compartida. Se aplica solo dentro de esta condición. */
+    .site-header {
+        /* Establece la altura mínima. */
+        min-height: 78px;
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 15px 5%
+    }
+
+    /* Selector .project-grid, .two-column, .detail-grid, .robotics-banner: controla la presentación del Club de Robótica. Se aplica solo dentro de esta condición. */
+    .project-grid,
+    .two-column,
+    .detail-grid,
+    .robotics-banner {
+        /* Define las columnas de la cuadrícula. */
+        grid-template-columns: 1fr
+    }
+
+    /* Selector .section-heading: controla la presentación general de las páginas. Se aplica solo dentro de esta condición. */
+    .section-heading {
+        /* Alinea elementos en el eje transversal. */
+        align-items: start;
+        /* Organiza los elementos en fila o columna. */
+        flex-direction: column;
+        /* Separa los elementos de la distribución. */
+        gap: 12px
+    }
+
+    /* Selector .section-heading h2: controla la presentación general de las páginas. Se aplica solo dentro de esta condición. */
+    .section-heading h2 {
+        /* Ajusta el tamaño de la letra. */
+        font-size: 1.9rem
+    }
+
+    /* Selector .project-grid: controla las tarjetas y los listados de experimentos. Se aplica solo dentro de esta condición. */
+    .project-grid {
+        /* Separa los elementos de la distribución. */
+        gap: 18px
+    }
+
+    /* Selector .project-card>a>img: controla las tarjetas y los listados de experimentos. Se aplica solo dentro de esta condición. */
+    .project-card>a>img {
+        /* Establece la altura. */
+        height: 240px
+    }
+
+    /* Selector .stats-grid: controla los contadores y gráficos del panel. Se aplica solo dentro de esta condición. */
+    .stats-grid {
+        /* Define las columnas de la cuadrícula. */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Separa los elementos de la distribución. */
+        gap: 12px
+    }
+
+    /* Selector .stat-card: controla los contadores y gráficos del panel. Se aplica solo dentro de esta condición. */
+    .stat-card {
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 18px
+    }
+
+    /* Selector .stat-card strong: controla los contadores y gráficos del panel. Se aplica solo dentro de esta condición. */
+    .stat-card strong {
+        /* Ajusta el tamaño de la letra. */
+        font-size: 2rem
+    }
+
+    /* Selector .page-band h1: controla los paneles y la administración. Se aplica solo dentro de esta condición. */
+    .page-band h1 {
+        /* Ajusta el tamaño de la letra. */
+        font-size: 2rem
+    }
+
+    /* Selector .robotics-banner: controla la presentación del Club de Robótica. Se aplica solo dentro de esta condición. */
+    .robotics-banner {
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 28px;
+        /* Separa los elementos de la distribución. */
+        gap: 25px
+    }
+
+    /* Selector .form-card: controla los formularios de acceso, perfil y gestión. Se aplica solo dentro de esta condición. */
+    .form-card {
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 22px
+    }
+
+    /* Selector .auth-shell .form-card: controla las pantallas de registro e inicio de sesión. Se aplica solo dentro de esta condición. */
+    .auth-shell .form-card {
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 28px
+    }
+
+    /* Selector .auth-shell h1: controla las pantallas de registro e inicio de sesión. Se aplica solo dentro de esta condición. */
+    .auth-shell h1 {
+        /* Ajusta el tamaño de la letra. */
+        font-size: 2rem
+    }
+
+    /* Selector .gallery button:first-child img: controla las fotografías y su vista ampliada. Se aplica solo dentro de esta condición. */
+    .gallery button:first-child img {
+        /* Establece la altura. */
+        height: 270px
+    }
+
+    /* Selector .profile-header: controla el perfil, los autores y el menú de la cuenta. Se aplica solo dentro de esta condición. */
+    .profile-header {
+        /* Separa los elementos de la distribución. */
+        gap: 15px;
+        /* Alinea elementos en el eje transversal. */
+        align-items: start
+    }
+
+    /* Selector .profile-header>.avatar: controla el perfil, los autores y el menú de la cuenta. Se aplica solo dentro de esta condición. */
+    .profile-header>.avatar {
+        /* Establece el ancho. */
+        width: 65px;
+        /* Establece la altura. */
+        height: 65px;
+        /* Ajusta el tamaño de la letra. */
+        font-size: 2rem
+    }
+
+    /* Selector .profile-header h1: controla el perfil, los autores y el menú de la cuenta. Se aplica solo dentro de esta condición. */
+    .profile-header h1 {
+        /* Ajusta el tamaño de la letra. */
+        font-size: 1.9rem
+    }
+
+    /* Selector .user-menu>div: controla el perfil, los autores y el menú de la cuenta. Se aplica solo dentro de esta condición. */
+    .user-menu>div {
+        /* Fija la distancia a los límites del contenedor o de la pantalla. */
+        left: 0;
+        /* Fija la distancia a los límites del contenedor o de la pantalla. */
+        right: auto
+    }
+
+    /* Selector .user-menu summary: controla el perfil, los autores y el menú de la cuenta. Se aplica solo dentro de esta condición. */
+    .user-menu summary {
+        /* Limita el ancho máximo. */
+        max-width: 220px
+    }
+
+    /* Selector .top-nav.open: controla el encabezado y la navegación compartida. Se aplica solo dentro de esta condición. */
+    .top-nav.open {
+        /* Separa los elementos de la distribución. */
+        gap: 20px
+    }
+
+    /* Selector .admin-nav: controla los paneles y la administración. Se aplica solo dentro de esta condición. */
+    .admin-nav {
+        /* Separa los elementos de la distribución. */
+        gap: 10px 16px;
+        /* Ajusta el tamaño de la letra. */
+        font-size: .75rem
+    }
+
+    /* Selector .people-grid: controla la distribución de secciones y tarjetas. Se aplica solo dentro de esta condición. */
+    .people-grid {
+        /* Define las columnas de la cuadrícula. */
+        grid-template-columns: 1fr
+    }
+
+    /* Selector .chart-row: controla los contadores y gráficos del panel. Se aplica solo dentro de esta condición. */
+    .chart-row {
+        /* Define las columnas de la cuadrícula. */
+        grid-template-columns: 105px 1fr 25px;
+        /* Separa los elementos de la distribución. */
+        gap: 7px
+    }
+
+    /* Selector .timeline: controla los avances del proyecto de robótica. Se aplica solo dentro de esta condición. */
+    .timeline {
+        /* Ajusta el espacio interior en el lado o eje indicado. */
+        padding-left: 18px
+    }
+
+    /* Selector .timeline-item:before: controla los avances del proyecto de robótica. Se aplica solo dentro de esta condición. */
+    .timeline-item:before {
+        /* Fija la distancia a los límites del contenedor o de la pantalla. */
+        left: -27px
+    }
+
+    /* Selector .timeline-item: controla los avances del proyecto de robótica. Se aplica solo dentro de esta condición. */
+    .timeline-item {
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 18px
+    }
+
+    /* Selector .chart-row span: controla los contadores y gráficos del panel. Se aplica solo dentro de esta condición. */
+    .chart-row span {
+        /* Permite partir textos largos. */
+        overflow-wrap: anywhere
+    }
+
+    /* Selector .filters: controla la presentación general de las páginas. Se aplica solo dentro de esta condición. */
+    .filters {
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 20px
+    }
+
+    /* Selector .table-wrap table, .table-wrap tbody, .table-wrap tr, .table-wrap td: controla las tablas de gestión e historial. Se aplica solo dentro de esta condición. */
+    .table-wrap table,
+    .table-wrap tbody,
+    .table-wrap tr,
+    .table-wrap td {
+        /* Define cómo se distribuye o se oculta el elemento. */
+        display: block;
+        /* Establece el ancho mínimo. */
+        min-width: 0
+    }
+
+    /* Selector .table-wrap thead: controla las tablas de gestión e historial. Se aplica solo dentro de esta condición. */
+    .table-wrap thead {
+        /* Define cómo se distribuye o se oculta el elemento. */
+        display: none
+    }
+
+    /* Selector .table-wrap tr: controla las tablas de gestión e historial. Se aplica solo dentro de esta condición. */
+    .table-wrap tr {
+        /* Dibuja el contorno del elemento. */
+        border: 1px solid var(--line);
+        /* Redondea las esquinas. */
+        border-radius: 12px;
+        /* Separa el elemento de los elementos exteriores. */
+        margin: 12px 0;
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 12px
+    }
+
+    /* Selector .table-wrap td: controla las tablas de gestión e historial. Se aplica solo dentro de esta condición. */
+    .table-wrap td {
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 5px;
+        /* Dibuja el contorno del elemento. */
+        border: 0
+    }
+
+    /* Selector .table-wrap td:before: controla las tablas de gestión e historial. Se aplica solo dentro de esta condición. */
+    .table-wrap td:before {
+        /* Genera contenido decorativo o una etiqueta mediante un pseudoelemento. */
+        content: attr(data-label) ": ";
+        /* Ajusta el grosor de la letra. */
+        font-weight: 750
+    }
+
+    /* Selector .panel-grid: controla los paneles y la administración. Se aplica solo dentro de esta condición. */
+    .panel-grid {
+        /* Separa el elemento de los elementos exteriores. */
+        margin: 30px auto
+    }
+
+    /* Selector .panel-grid .info-card: controla los paneles y la administración. Se aplica solo dentro de esta condición. */
+    .panel-grid .info-card {
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 20px
+    }
+}
+
+/* Accesibilidad: reduce animaciones cuando la persona lo solicita en su dispositivo. */
+@media(prefers-reduced-motion:reduce) {
+
+    /* Selector *, *:before, *:after: controla la presentación general de las páginas. Se aplica solo dentro de esta condición. */
+    *,
+    *:before,
+    *:after {
+        /* Aplica la animación declarada. */
+        animation: none !important;
+        /* Suaviza el cambio entre estados visuales. */
+        transition: none !important;
+        /* Controla el desplazamiento suave o inmediato. */
+        scroll-behavior: auto !important
+    }
+}
+

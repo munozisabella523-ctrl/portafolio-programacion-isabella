@@ -1,0 +1,1126 @@
+/* ARCHIVO: css/componentes.css
+ * COMPONENTES REUTILIZABLES
+ * .project-grid: distribución de proyectos; .project-card: cada tarjeta.
+ * .flip-card: curiosidades giratorias; .modal: ventanas de confirmación.
+ * Los estados de las clases se activan desde js/confirmaciones_interfaz.js.
+ */
+
+/* Selector .project-grid: controla las tarjetas y los listados de experimentos. */
+.project-grid {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Define las columnas de la cuadrícula. */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* Separa los elementos de la distribución. */
+    gap: 24px
+}
+
+/* Selector .project-card: controla las tarjetas y los listados de experimentos. */
+.project-card {
+    /* Define el fondo: color, imagen o combinación. */
+   
+    /* Dibuja el contorno del elemento. */
+    border: 30px ;
+    color-border: rgb(238, 63, 238);
+    /* Redondea las esquinas. */
+    border-radius: 10px;
+    /* Controla el contenido que supera los límites. */
+    overflow: hidden;
+    /* Suaviza el cambio entre estados visuales. */
+    transition: .2s;
+    /* Establece el ancho mínimo. */
+    min-width: 10
+}
+
+/* Selector .project-card>a>img: controla las tarjetas y los listados de experimentos. */
+.project-card>a>img {
+    /* Establece el ancho. */
+    width: 100%;
+    /* Establece la altura. */
+    height: 225px;
+    /* Ajusta una imagen dentro de su espacio sin deformarla. */
+    object-fit: cover;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #eaf3ec
+}
+
+/* Selector .project-body: controla las tarjetas y los listados de experimentos. */
+.project-body {
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 24px
+}
+
+/* Selector .project-body p: controla las tarjetas y los listados de experimentos. */
+.project-body p {
+    /* Ajusta el tamaño de la letra. */
+    font-size: .88rem;
+    /* Define el color del texto o del icono. */
+    color: var(--muted)
+}
+
+/* Selector .project-body h3 a: controla las tarjetas y los listados de experimentos. */
+.project-body h3 a {
+    /* Define el color del texto o del icono. */
+    color: var(--ink)
+}
+
+/* Selector .project-body .eyebrow: controla las tarjetas y los listados de experimentos. */
+.project-body .eyebrow {
+    /* Ajusta el tamaño de la letra. */
+    font-size: .66rem;
+    /* Define el color del texto o del icono. */
+    color: var(--green)
+}
+
+/* Selector .meta, small: controla la presentación general de las páginas. */
+.meta,
+small {
+    /* Define el color del texto o del icono. */
+    color: var(--muted);
+    /* Ajusta el tamaño de la letra. */
+    font-size: .8rem
+}
+
+/* Selector .badge: controla las etiquetas de rol y estado. */
+.badge {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: inline-flex;
+    /* Separa los elementos de la distribución. */
+    gap: 5px;
+    /* Redondea las esquinas. */
+    border-radius: 30px;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 5px 11px;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #edf2f5;
+    /* Define el color del texto o del icono. */
+    color: #435b6c;
+    /* Ajusta el tamaño de la letra. */
+    font-size: .68rem;
+    /* Ajusta el grosor de la letra. */
+    font-weight: 750;
+    /* Define la separación entre líneas. */
+    line-height: 1.5;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 2px
+}
+
+/* Selector .badge.pendiente: controla las etiquetas de rol y estado. */
+.badge.pendiente {
+    /* Define el fondo: color, imagen o combinación. */
+    background: #edf2f5;
+    /* Define el color del texto o del icono. */
+    color: #435b6c
+}
+
+/* Selector .badge.aprobado, .badge.visible, .badge.activo: controla las etiquetas de rol y estado. */
+.badge.aprobado,
+.badge.visible,
+.badge.activo {
+    /* Define el fondo: color, imagen o combinación. */
+    background: #e3f3e7;
+    /* Define el color del texto o del icono. */
+    color: #176536
+}
+
+/* Selector .badge.rechazado, .badge.inactivo: controla las etiquetas de rol y estado. */
+.badge.rechazado,
+.badge.inactivo {
+    /* Define el fondo: color, imagen o combinación. */
+    background: #fce8e9;
+    /* Define el color del texto o del icono. */
+    color: #992934
+}
+
+/* Selector .badge.cambios_solicitados, .badge.profesor: controla las etiquetas de rol y estado. */
+.badge.cambios_solicitados,
+.badge.profesor {
+    /* Define el fondo: color, imagen o combinación. */
+    background: #e3effe;
+    /* Define el color del texto o del icono. */
+    color: #15529c
+}
+
+/* Selector .carousel-controls: controla el carrusel del inicio y de Feria de Ciencia. */
+.carousel-controls {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Separa los elementos de la distribución. */
+    gap: 12px;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Distribuye elementos a lo largo del eje principal. */
+    justify-content: space-between;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-top: 14px
+}
+
+/* Selector .robotics-banner: controla la presentación del Club de Robótica. */
+.robotics-banner {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Define las columnas de la cuadrícula. */
+    grid-template-columns: 1.3fr 1fr;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Separa los elementos de la distribución. */
+    gap: 40px;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 50px;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #eaf2fc;
+    /* Dibuja el contorno del elemento. */
+    border: 1px solid #d9e7f8;
+    /* Redondea las esquinas. */
+    border-radius: 28px
+}
+
+/* Selector .robotics-banner .eyebrow: controla la presentación del Club de Robótica. */
+.robotics-banner .eyebrow {
+    /* Define el color del texto o del icono. */
+    color: var(--blue)
+}
+
+/* Selector .page-band: controla los paneles y la administración. */
+.page-band {
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 40px 5% 10px;
+    /* Establece el ancho. */
+    width: min(1350px, 100%);
+    /* Separa el elemento de los elementos exteriores. */
+    margin: auto
+}
+
+/* Selector .page-band h1: controla los paneles y la administración. */
+.page-band h1 {
+    /* Ajusta el tamaño de la letra. */
+    font-size: 2.4rem
+}
+
+/* Selector .admin-nav: controla los paneles y la administración. */
+.admin-nav {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Separa los elementos de la distribución. */
+    gap: 14px;
+    /* Permite pasar elementos a otra fila. */
+    flex-wrap: wrap;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #eaf2fc;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 13px 5%;
+    /* Ajusta el tamaño de la letra. */
+    font-size: .8rem;
+    /* Ajusta el grosor de la letra. */
+    font-weight: 650
+}
+
+/* Selector .stats-grid: controla los contadores y gráficos del panel. */
+.stats-grid {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Define las columnas de la cuadrícula. */
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    /* Separa los elementos de la distribución. */
+    gap: 18px;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 45px
+}
+
+/* Selector .stat-card: controla los contadores y gráficos del panel. */
+.stat-card {
+    /* Ajusta el borde del lado o eje indicado. */
+    border-top: 3px solid var(--blue)
+}
+
+/* Selector .stat-card:nth-child(2n): controla los contadores y gráficos del panel. */
+.stat-card:nth-child(2n) {
+    /* Ajusta el borde del lado o eje indicado. */
+    border-top-color: var(--green)
+}
+
+/* Selector .stat-card:nth-child(3n): controla los contadores y gráficos del panel. */
+.stat-card:nth-child(3n) {
+    /* Ajusta el borde del lado o eje indicado. */
+    border-top-color: var(--accent)
+}
+
+/* Selector .stat-card span: controla los contadores y gráficos del panel. */
+.stat-card span {
+    /* Ajusta el tamaño de la letra. */
+    font-size: .8rem;
+    /* Define el color del texto o del icono. */
+    color: var(--muted)
+}
+
+/* Selector .stat-card strong: controla los contadores y gráficos del panel. */
+.stat-card strong {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: block;
+    /* Ajusta el tamaño de la letra. */
+    font-size: 2.4rem;
+    /* Define la separación entre líneas. */
+    line-height: 1.3;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-top: 12px
+}
+
+/* Selector .two-column: controla la distribución de secciones y tarjetas. */
+.two-column {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Define las columnas de la cuadrícula. */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    /* Separa los elementos de la distribución. */
+    gap: 30px;
+    /* Alinea elementos en el eje transversal. */
+    align-items: start
+}
+
+/* Selector .detail-grid: controla la distribución de secciones y tarjetas. */
+.detail-grid {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Define las columnas de la cuadrícula. */
+    grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr);
+    /* Separa los elementos de la distribución. */
+    gap: 30px;
+    /* Alinea elementos en el eje transversal. */
+    align-items: start;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 35px 0
+}
+
+/* Selector .stack: controla la distribución de secciones y tarjetas. */
+.stack {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Separa los elementos de la distribución. */
+    gap: 20px;
+    /* Establece el ancho mínimo. */
+    min-width: 0
+}
+
+/* Selector .form-card: controla los formularios de acceso, perfil y gestión. */
+.form-card {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Separa los elementos de la distribución. */
+    gap: 15px;
+    /* Establece el ancho. */
+    width: 100%;
+    /* Limita el ancho máximo. */
+    max-width: 650px
+}
+
+/* Selector .form-card h2, .form-card h3: controla los formularios de acceso, perfil y gestión. */
+.form-card h2,
+.form-card h3 {
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 0
+}
+
+/* Selector .form-card label, label: controla los formularios de acceso, perfil y gestión. */
+.form-card label,
+label {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Separa los elementos de la distribución. */
+    gap: 7px;
+    /* Ajusta el tamaño de la letra. */
+    font-size: .85rem;
+    /* Ajusta el grosor de la letra. */
+    font-weight: 650
+}
+
+/* Selector input, select, textarea: controla los formularios de acceso, perfil y gestión. */
+input,
+select,
+textarea {
+    /* Establece el ancho. */
+    width: 100%;
+    /* Establece el ancho mínimo. */
+    min-width: 0;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 12px;
+    /* Dibuja el contorno del elemento. */
+    border: 1px solid #c9d9dc;
+    /* Define el fondo: color, imagen o combinación. */
+    background: white;
+    /* Define el color del texto o del icono. */
+    color: var(--ink);
+    /* Redondea las esquinas. */
+    border-radius: 9px
+}
+
+/* Selector textarea: controla los formularios de acceso, perfil y gestión. */
+textarea {
+    /* Permite o limita el cambio manual de tamaño. */
+    resize: vertical
+}
+
+/* Selector .checkbox: controla los formularios de acceso, perfil y gestión. */
+.checkbox {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Separa los elementos de la distribución. */
+    gap: 10px
+}
+
+/* Selector .checkbox input: controla los formularios de acceso, perfil y gestión. */
+.checkbox input {
+    /* Establece el ancho. */
+    width: 18px;
+    /* Establece la altura. */
+    height: 18px
+}
+
+/* Selector .inline: controla la presentación general de las páginas. */
+.inline {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: inline-flex;
+    /* Separa los elementos de la distribución. */
+    gap: 10px;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 5px
+}
+
+/* Selector .auth-shell: controla las pantallas de registro e inicio de sesión. */
+.auth-shell {
+    /* Establece la altura mínima. */
+    min-height: 72vh;
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Alinea los elementos en ambos ejes. */
+    place-items: center;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 50px 5%;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #e0ecff
+}
+
+/* Selector .auth-shell .form-card: controla las pantallas de registro e inicio de sesión. */
+.auth-shell .form-card {
+    /* Limita el ancho máximo. */
+    max-width: 500px;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 40px
+}
+
+/* Selector .auth-shell h1: controla las pantallas de registro e inicio de sesión. */
+.auth-shell h1 {
+    /* Ajusta el tamaño de la letra. */
+    font-size: 2.5rem
+}
+
+/* Selector .filters: controla la presentación general de las páginas. */
+.filters {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Permite pasar elementos a otra fila. */
+    flex-wrap: wrap;
+    /* Separa los elementos de la distribución. */
+    gap: 15px;
+    /* Alinea elementos en el eje transversal. */
+    align-items: end;
+    /* Define el fondo: color, imagen o combinación. */
+    background: white;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 25px;
+    /* Dibuja el contorno del elemento. */
+    border: 1px solid var(--line);
+    /* Redondea las esquinas. */
+    border-radius: 20px;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 35px 0
+}
+
+/* Selector .filters label: controla la presentación general de las páginas. */
+.filters label {
+    /* Controla cómo crece, se reduce y ocupa espacio un elemento flexible. */
+    flex: 1 1 140px
+}
+
+/* Selector .filters label:first-child: controla la presentación general de las páginas. */
+.filters label:first-child {
+    /* Define el tamaño inicial en la distribución flexible. */
+    flex-basis: 240px
+}
+
+/* Selector .filters .checkbox: controla los formularios de acceso, perfil y gestión. */
+.filters .checkbox {
+    /* Controla cómo crece, se reduce y ocupa espacio un elemento flexible. */
+    flex: 0 1 auto;
+    /* Establece la altura mínima. */
+    min-height: 46px
+}
+
+/* Selector .search-form: controla los formularios de acceso, perfil y gestión. */
+.search-form {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Alinea elementos en el eje transversal. */
+    align-items: end;
+    /* Separa los elementos de la distribución. */
+    gap: 12px;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 25px
+}
+
+/* Selector .search-form label: controla los formularios de acceso, perfil y gestión. */
+.search-form label {
+    /* Controla cómo crece, se reduce y ocupa espacio un elemento flexible. */
+    flex: 1
+}
+
+/* Selector .pagination: controla la navegación entre páginas de un listado. */
+.pagination {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Separa los elementos de la distribución. */
+    gap: 10px;
+    /* Distribuye elementos a lo largo del eje principal. */
+    justify-content: center;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 30px 0
+}
+
+/* Selector .flash: controla los avisos temporales después de una acción. */
+.flash {
+    /* Establece el ancho. */
+    width: min(1000px, 90%);
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 20px auto;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 18px 22px;
+    /* Redondea las esquinas. */
+    border-radius: 12px;
+    /* Ajusta el borde del lado o eje indicado. */
+    border-left: 4px solid var(--green);
+    /* Define el fondo: color, imagen o combinación. */
+    background: #e0f2e6;
+    /* Define el color del texto o del icono. */
+    color: #165c37
+}
+
+/* Selector .flash.error: controla los avisos temporales después de una acción. */
+.flash.error {
+    /* Define el color del contorno. */
+    border-color: #ad303a;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #fce8e9;
+    /* Define el color del texto o del icono. */
+    color: #982333
+}
+
+/* Selector .empty-state: controla los avisos de apartados sin registros. */
+.empty-state {
+    /* Define el fondo: color, imagen o combinación. */
+    background: white;
+    /* Dibuja el contorno del elemento. */
+    border: 1px dashed #bfd7ce;
+    /* Redondea las esquinas. */
+    border-radius: 20px;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 42px;
+    /* Alinea el texto. */
+    text-align: center;
+    /* Indica qué columnas ocupa el elemento. */
+    grid-column: 1/-1;
+    /* Define el color del texto o del icono. */
+    color: var(--muted)
+}
+
+/* Selector .empty-state h3: controla los avisos de apartados sin registros. */
+.empty-state h3 {
+    /* Define el color del texto o del icono. */
+    color: var(--ink)
+}
+
+/* Selector .empty-state p: controla los avisos de apartados sin registros. */
+.empty-state p {
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 0 auto;
+    /* Limita el ancho máximo. */
+    max-width: 600px
+}
+
+/* Selector .big-icon: controla los avisos de apartados sin registros. */
+.big-icon {
+    /* Ajusta el tamaño de la letra. */
+    font-size: 3rem;
+    /* Define el color del texto o del icono. */
+    color: var(--green)
+}
+
+/* Selector .gallery: controla las fotografías y su vista ampliada. */
+.gallery {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Separa los elementos de la distribución. */
+    gap: 14px;
+    /* Permite pasar elementos a otra fila. */
+    flex-wrap: wrap;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 25px 0
+}
+
+/* Selector .gallery button: controla las fotografías y su vista ampliada. */
+.gallery button {
+    /* Dibuja el contorno del elemento. */
+    border: 0;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 0;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #e8f1ed;
+    /* Redondea las esquinas. */
+    border-radius: 14px;
+    /* Controla el contenido que supera los límites. */
+    overflow: hidden;
+    /* Controla cómo crece, se reduce y ocupa espacio un elemento flexible. */
+    flex: 0 1 150px
+}
+
+/* Selector .gallery button:first-child: controla las fotografías y su vista ampliada. */
+.gallery button:first-child {
+    /* Define el tamaño inicial en la distribución flexible. */
+    flex-basis: 100%
+}
+
+/* Selector .gallery img: controla las fotografías y su vista ampliada. */
+.gallery img {
+    /* Establece el ancho. */
+    width: 100%;
+    /* Establece la altura. */
+    height: 110px;
+    /* Ajusta una imagen dentro de su espacio sin deformarla. */
+    object-fit: cover;
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: block
+}
+
+/* Selector .gallery button:first-child img: controla las fotografías y su vista ampliada. */
+.gallery button:first-child img {
+    /* Establece la altura. */
+    height: 420px;
+    /* Ajusta una imagen dentro de su espacio sin deformarla. */
+    object-fit: contain
+}
+
+/* Selector .thumb: controla las fotografías y su vista ampliada. */
+.thumb {
+    /* Establece el ancho. */
+    width: 140px;
+    /* Limita la altura máxima. */
+    max-height: 130px;
+    /* Ajusta una imagen dentro de su espacio sin deformarla. */
+    object-fit: contain;
+    /* Redondea las esquinas. */
+    border-radius: 10px
+}
+
+/* Selector .cover: controla las fotografías y su vista ampliada. */
+.cover {
+    /* Establece el ancho. */
+    width: 100%;
+    /* Limita la altura máxima. */
+    max-height: 440px;
+    /* Ajusta una imagen dentro de su espacio sin deformarla. */
+    object-fit: contain;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #e9f3ed;
+    /* Redondea las esquinas. */
+    border-radius: 20px
+}
+
+/* Selector .author: controla el perfil, los autores y el menú de la cuenta. */
+.author {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Separa los elementos de la distribución. */
+    gap: 12px;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Define el color del texto o del icono. */
+    color: var(--muted);
+    /* Ajusta el tamaño de la letra. */
+    font-size: .8rem
+}
+
+/* Selector .avatar: controla el perfil, los autores y el menú de la cuenta. */
+.avatar {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: inline-grid;
+    /* Alinea los elementos en ambos ejes. */
+    place-items: center;
+    /* Establece el ancho. */
+    width: 40px;
+    /* Establece la altura. */
+    height: 40px;
+    /* Redondea las esquinas. */
+    border-radius: 50%;
+    /* Ajusta una imagen dentro de su espacio sin deformarla. */
+    object-fit: cover;
+    /* Alinea el elemento con el texto cercano. */
+    vertical-align: middle;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-right: 8px;
+    /* Controla cuánto puede reducirse el elemento. */
+    flex-shrink: 0
+}
+
+/* Selector .inicial: controla el perfil, los autores y el menú de la cuenta. */
+.inicial {
+    /* Define el fondo: color, imagen o combinación. */
+    background: #e1eefb;
+    /* Define el color del texto o del icono. */
+    color: var(--blue);
+    /* Ajusta el grosor de la letra. */
+    font-weight: 800
+}
+
+/* Selector .user-menu: controla el perfil, los autores y el menú de la cuenta. */
+.user-menu {
+    /* Define si sigue el flujo o se coloca respecto a otro contenedor o la pantalla. */
+    position: relative
+}
+
+/* Selector .user-menu summary: controla el perfil, los autores y el menú de la cuenta. */
+.user-menu summary {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Elige el cursor que indica la interacción. */
+    cursor: pointer;
+    /* Ajusta el tamaño de la letra. */
+    font-size: .78rem;
+    /* Limita el ancho máximo. */
+    max-width: 190px
+}
+
+/* Selector .user-menu summary span:not(.avatar): controla el perfil, los autores y el menú de la cuenta. */
+.user-menu summary span:not(.avatar) {
+    /* Limita el ancho máximo. */
+    max-width: 120px;
+    /* Controla el contenido que supera los límites. */
+    overflow: hidden;
+    /* Define cómo se señala un texto recortado. */
+    text-overflow: ellipsis
+}
+
+/* Selector .user-menu>div: controla el perfil, los autores y el menú de la cuenta. */
+.user-menu>div {
+    /* Define si sigue el flujo o se coloca respecto a otro contenedor o la pantalla. */
+    position: absolute;
+    /* Fija la distancia a los límites del contenedor o de la pantalla. */
+    right: 0;
+    /* Establece el ancho mínimo. */
+    min-width: 220px;
+    /* Define el fondo: color, imagen o combinación. */
+    background: white;
+    /* Dibuja el contorno del elemento. */
+    border: 1px solid var(--line);
+    /* Añade profundidad mediante una sombra. */
+    box-shadow: 0 10px 30px #102a4320;
+    /* Redondea las esquinas. */
+    border-radius: 14px;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 18px;
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Separa los elementos de la distribución. */
+    gap: 15px
+}
+
+/* Selector .profile-header: controla el perfil, los autores y el menú de la cuenta. */
+.profile-header {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Separa los elementos de la distribución. */
+    gap: 25px
+}
+
+/* Selector .profile-header>.avatar: controla el perfil, los autores y el menú de la cuenta. */
+.profile-header>.avatar {
+    /* Establece el ancho. */
+    width: 100px;
+    /* Establece la altura. */
+    height: 100px;
+    /* Ajusta el tamaño de la letra. */
+    font-size: 3rem
+}
+
+/* Selector .profile-header h1: controla el perfil, los autores y el menú de la cuenta. */
+.profile-header h1 {
+    /* Ajusta el tamaño de la letra. */
+    font-size: 2.5rem
+}
+
+/* Selector .prose: controla la presentación general de las páginas. */
+.prose {
+    /* Controla los espacios y saltos de línea. */
+    white-space: normal;
+    /* Permite partir textos largos. */
+    overflow-wrap: anywhere;
+    /* Define la separación entre líneas. */
+    line-height: 1.8
+}
+
+/* Selector .lead: controla la presentación general de las páginas. */
+.lead {
+    /* Ajusta el tamaño de la letra. */
+    font-size: 1.15rem;
+    /* Define el color del texto o del icono. */
+    color: var(--muted);
+    /* Limita el ancho máximo. */
+    max-width: 850px
+}
+
+/* Selector .comments: controla los comentarios y su revisión. */
+.comments {
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 40px 0
+}
+
+/* Selector .comments .comment-card: controla los comentarios y su revisión. */
+.comments .comment-card {
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 15px
+}
+
+/* Selector .comments .form-card: controla los formularios de acceso, perfil y gestión. */
+.comments .form-card {
+    /* Limita el ancho máximo. */
+    max-width: 100%
+}
+
+/* Selector .comment-card p: controla los comentarios y su revisión. */
+.comment-card p {
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 12px 0;
+    /* Permite partir textos largos. */
+    overflow-wrap: anywhere
+}
+
+/* Selector .notification-item: controla los avisos de Notificaciones. */
+.notification-item {
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 15px
+}
+
+/* Selector .unread: controla los avisos de Notificaciones. */
+.unread {
+    /* Ajusta el borde del lado o eje indicado. */
+    border-left: 5px solid var(--blue);
+    /* Define el fondo: color, imagen o combinación. */
+    background: #f9fcff
+}
+
+/* Selector .notification-link: controla los avisos de Notificaciones. */
+.notification-link {
+    /* Controla los espacios y saltos de línea. */
+    white-space: nowrap
+}
+
+/* Selector .recognition: controla los reconocimientos de experimentos. */
+.recognition {
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 20px;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #e8f3ef;
+    /* Redondea las esquinas. */
+    border-radius: 14px;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 20px 0
+}
+
+/* Selector .timeline: controla los avances del proyecto de robótica. */
+.timeline {
+    /* Ajusta el borde del lado o eje indicado. */
+    border-left: 3px solid #c2d9ef;
+    /* Ajusta el espacio interior en el lado o eje indicado. */
+    padding-left: 25px
+}
+
+/* Selector .timeline-item: controla los avances del proyecto de robótica. */
+.timeline-item {
+    /* Define si sigue el flujo o se coloca respecto a otro contenedor o la pantalla. */
+    position: relative;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 25px
+}
+
+/* Selector .timeline-item:before: controla los avances del proyecto de robótica. */
+.timeline-item:before {
+    /* Genera contenido decorativo o una etiqueta mediante un pseudoelemento. */
+    content: "";
+    /* Define si sigue el flujo o se coloca respecto a otro contenedor o la pantalla. */
+    position: absolute;
+    /* Fija la distancia a los límites del contenedor o de la pantalla. */
+    left: -34px;
+    /* Fija la distancia a los límites del contenedor o de la pantalla. */
+    top: 25px;
+    /* Establece el ancho. */
+    width: 13px;
+    /* Establece la altura. */
+    height: 13px;
+    /* Define el fondo: color, imagen o combinación. */
+    background: var(--blue);
+    /* Dibuja el contorno del elemento. */
+    border: 3px solid white;
+    /* Redondea las esquinas. */
+    border-radius: 50%
+}
+
+/* Selector .timeline .gallery button:first-child img: controla las fotografías y su vista ampliada. */
+.timeline .gallery button:first-child img {
+    /* Establece la altura. */
+    height: 230px
+}
+
+/* Selector .timeline .comments: controla los comentarios y su revisión. */
+.timeline .comments {
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 0
+}
+
+/* Selector .moderation .form-card: controla los formularios de acceso, perfil y gestión. */
+.moderation .form-card {
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 0;
+    /* Dibuja el contorno del elemento. */
+    border: 0;
+    /* Añade profundidad mediante una sombra. */
+    box-shadow: none;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 14px
+}
+
+/* Selector .modal: controla las ventanas de confirmación y formularios emergentes. */
+.modal {
+    /* Dibuja el contorno del elemento. */
+    border: 1px solid var(--line);
+    /* Redondea las esquinas. */
+    border-radius: 20px;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 28px;
+    /* Limita el ancho máximo. */
+    max-width: min(600px, 92vw);
+    /* Limita la altura máxima. */
+    max-height: 90vh;
+    /* Añade profundidad mediante una sombra. */
+    box-shadow: 0 30px 100px #102a4350;
+    /* Define el color del texto o del icono. */
+    color: var(--ink)
+}
+
+/* Selector .modal::backdrop: controla las ventanas de confirmación y formularios emergentes. Afecta a una parte generada o decorativa. */
+.modal::backdrop {
+    /* Define el fondo: color, imagen o combinación. */
+    background: #102a4380;
+    /* Aplica un efecto al fondo situado detrás. */
+    backdrop-filter: blur(4px)
+}
+
+/* Selector .modal .form-card: controla los formularios de acceso, perfil y gestión. */
+.modal .form-card {
+    /* Dibuja el contorno del elemento. */
+    border: 0;
+    /* Añade profundidad mediante una sombra. */
+    box-shadow: none;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 0
+}
+
+/* Selector .lightbox: controla las fotografías y su vista ampliada. */
+.lightbox {
+    /* Limita el ancho máximo. */
+    max-width: 94vw;
+    /* Define el fondo: color, imagen o combinación. */
+    background: white
+}
+
+/* Selector .lightbox img: controla las fotografías y su vista ampliada. */
+.lightbox img {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: block;
+    /* Limita la altura máxima. */
+    max-height: 77vh;
+    /* Ajusta una imagen dentro de su espacio sin deformarla. */
+    object-fit: contain
+}
+
+/* Selector .cerrar-visor: controla las fotografías y su vista ampliada. */
+.cerrar-visor {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: block;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 0 0 12px auto
+}
+
+/* Selector .breadcrumb: controla la presentación general de las páginas. */
+.breadcrumb {
+    /* Ajusta el tamaño de la letra. */
+    font-size: .8rem;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 30px
+}
+
+/* Selector .chart-row: controla los contadores y gráficos del panel. */
+.chart-row {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Define las columnas de la cuadrícula. */
+    grid-template-columns: 150px 1fr 40px;
+    /* Separa los elementos de la distribución. */
+    gap: 15px;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Ajusta el tamaño de la letra. */
+    font-size: .8rem;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 15px 0
+}
+
+/* Selector meter: controla los contadores y gráficos del panel. */
+meter {
+    /* Establece el ancho. */
+    width: 100%;
+    /* Establece la altura. */
+    height: 22px
+}
+
+/* Selector .people-grid: controla la distribución de secciones y tarjetas. */
+.people-grid {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Define las columnas de la cuadrícula. */
+    grid-template-columns: repeat(2, 1fr);
+    /* Separa los elementos de la distribución. */
+    gap: 15px
+}
+
+/* Selector .table-wrap: controla las tablas de gestión e historial. */
+.table-wrap {
+    /* Controla el contenido que supera los límites. */
+    overflow: auto
+}
+
+/* Selector table: controla las tablas de gestión e historial. */
+table {
+    /* Establece el ancho. */
+    width: 100%;
+    /* Une o separa los bordes de las celdas. */
+    border-collapse: collapse;
+    /* Ajusta el tamaño de la letra. */
+    font-size: .8rem
+}
+
+/* Selector th, td: controla las tablas de gestión e historial. */
+th,
+td {
+    /* Alinea el texto. */
+    text-align: left;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 13px;
+    /* Ajusta el borde del lado o eje indicado. */
+    border-bottom: 1px solid var(--line);
+    /* Permite partir textos largos. */
+    overflow-wrap: anywhere
+}
+
+/* Selector th: controla las tablas de gestión e historial. */
+th {
+    /* Define el fondo: color, imagen o combinación. */
+    background: #eaf3fb
+}
+
+/* Selector .panel-grid: controla los paneles y la administración. */
+.panel-grid {
+    /* Establece el ancho. */
+    width: 90%;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 40px auto;
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Separa los elementos de la distribución. */
+    gap: 25px
+}
+
+/* Selector .menu-toggle: controla el encabezado y la navegación compartida. */
+.menu-toggle {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: none
+}
+
+/* Selector .skip: controla el encabezado y la navegación compartida. */
+.skip {
+    /* Define si sigue el flujo o se coloca respecto a otro contenedor o la pantalla. */
+    position: absolute;
+    /* Fija la distancia a los límites del contenedor o de la pantalla. */
+    top: -100px;
+    /* Fija la distancia a los límites del contenedor o de la pantalla. */
+    left: 20px;
+    /* Define el fondo: color, imagen o combinación. */
+    background: white;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 12px;
+    /* Establece el orden de superposición. */
+    z-index: 100
+}
+
+/* Selector .skip:focus: controla el encabezado y la navegación compartida. Se aplica al recibir foco, por ejemplo con el teclado. */
+.skip:focus {
+    /* Fija la distancia a los límites del contenedor o de la pantalla. */
+    top: 15px
+}
+
+/* Selector :focus-visible: controla la presentación general de las páginas. Se aplica al recibir foco, por ejemplo con el teclado. */
+:focus-visible {
+    /* Dibuja el indicador de foco para el teclado. */
+    outline: 3px solid #357567;
+    /* Separa el indicador de foco del borde. */
+    outline-offset: 4px
+}
+
+/* Selector .info-card, .form-card, .project-body: controla las tarjetas y los listados de experimentos. */
+.info-card,
+.form-card,
+.project-body {
+    /* Establece el ancho mínimo. */
+    min-width: 0
+}
+
+/* Selector .info-card>h2: controla la distribución de secciones y tarjetas. */
+.info-card>h2 {
+    /* Ajusta el tamaño de la letra. */
+    font-size: 1.65rem
+}
+
+/* Selector .info-card p: controla la distribución de secciones y tarjetas. */
+.info-card p {
+    /* Permite partir textos largos. */
+    overflow-wrap: anywhere
+}
+
+/* Define los pasos de la animación appear. */
+@keyframes appear {
+    /* Selector from: controla la presentación general de las páginas. Es un paso de la animación appear. */
+    from {
+        /* Ajusta la transparencia. */
+        opacity: .3
+    }
+
+    /* Selector to: controla la presentación general de las páginas. Es un paso de la animación appear. */
+    to {
+        /* Ajusta la transparencia. */
+        opacity: 1
+    }
+}
+
+/* Adaptación de pantalla: (max-width:1180px). */

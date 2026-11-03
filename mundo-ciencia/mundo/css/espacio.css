@@ -1,0 +1,152 @@
+/* ARCHIVO: css/espacio.css
+ * FONDOS Y PORTADAS ESPACIALES
+ * Las clases .fondo-* eligen la fotografía mediante la variable --foto.
+ * .cabecera-espacial muestra las portadas de cada apartado.
+ * @keyframes define los pasos de las animaciones; @media adapta la presentación.
+ */
+
+/* FONDOS ESPACIALES: originales NASA de más de 3840 píxeles de ancho.
+   Cada clase elige una fotografía; no se aplica opacidad a las imágenes. */
+.fondo-saturno { --foto: url('../imagenes/saturno-4k.jpg'); }
+.fondo-marte { --foto: url('../imagenes/marte-4k.jpg'); }
+.fondo-tierra { --foto: url('../imagenes/tierra-4k.jpg'); }
+.fondo-galaxia { --foto: url('../imagenes/galaxia-4k.jpg'); }
+
+/* Portadas anchas de Experimentos, Robótica, Feria y Curiosidades. */
+.cabecera-espacial {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    padding: 55px 7%;
+    background-color: #000;
+    background-image: var(--foto);
+    background-repeat: no-repeat;
+    background-size: auto 120%;
+    background-position: 90% center;
+}
+
+/* ANIMACIONES DE PLANETAS: acercamiento lento de la imagen de fondo.
+   Solo se anima background-size: los títulos, formularios y botones quedan quietos. */
+.cabecera-espacial.fondo-saturno,
+.cabecera-espacial.fondo-marte,
+.cabecera-espacial.fondo-tierra {
+    --zoom-inicial: 120%;
+    --zoom-final: 132%;
+    animation: enfocar-planeta 2s ease-in-out infinite alternate;
+}
+
+/* Tierra en Registro e Iniciar sesión. */
+.acceso-espacial .auth-shell {
+    --zoom-inicial: 100%;
+    --zoom-final: 108%;
+    animation: enfocar-planeta 12s ease-in-out infinite alternate;
+}
+
+/* Saturno en el juego. */
+.juego-espacial main {
+    --zoom-inicial: 75%;
+    --zoom-final: 82%;
+    animation: enfocar-planeta 12s ease-in-out infinite alternate;
+}
+
+/* De tamaño inicial a final; alternate hace el regreso sin saltos. */
+@keyframes enfocar-planeta {
+    from { background-size: auto var(--zoom-inicial); }
+    to { background-size: auto var(--zoom-final); }
+}
+
+/* Venus en la tarjeta giratoria: el marco recorta el zoom para no tapar el texto. */
+.flip-con-imagen .marco-planeta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.marco-planeta img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: acercar-venus 12s ease-in-out infinite alternate;
+}
+@keyframes acercar-venus {
+    from { transform: scale(1); }
+    to { transform: scale(1.08); }
+}
+
+/* En celular el acercamiento de las portadas parte de su tamaño móvil. */
+@media (max-width: 700px) {
+    .cabecera-espacial.fondo-saturno,
+    .cabecera-espacial.fondo-marte,
+    .cabecera-espacial.fondo-tierra {
+        --zoom-inicial: 100%;
+        --zoom-final: 110%;
+    }
+}
+
+/* Respeta la preferencia de reducir movimiento del dispositivo. */
+@media (prefers-reduced-motion: reduce) {
+    .cabecera-espacial.fondo-saturno,
+    .cabecera-espacial.fondo-marte,
+    .cabecera-espacial.fondo-tierra,
+    .acceso-espacial .auth-shell,
+    .juego-espacial main,
+    .marco-planeta img {
+        animation: none;
+    }
+}
+.cabecera-espacial h1 {
+    color: white;
+    max-width: 600px;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    text-shadow: 0 2px 15px #000, 0 2px 4px #000;
+    margin: 0;
+}
+
+/* Registro e inicio de sesión: Tierra a la izquierda y formulario a la derecha. */
+.acceso-espacial .auth-shell {
+    min-height: calc(100svh - 90px);
+    padding: 24px 6%;
+    background: #000 url('../imagenes/tierra-4k.jpg') left center / auto 100% no-repeat;
+    justify-items: end;
+}
+.acceso-espacial .auth-shell .form-card {
+    background: #fff;
+    border: 1px solid #dce8e7;
+    border-radius: 22px;
+    padding: 26px;
+    box-shadow: 0 15px 60px #0005;
+}
+.acceso-espacial .auth-shell h1 { font-size: 2rem; margin: 0 0 8px; }
+.registro-compacto .auth-shell .form-card {
+    max-width: 580px;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 18px;
+}
+/* Título, correo, botón y enlace ocupan el ancho de las dos columnas. */
+.registro-compacto .form-card h1,
+.registro-compacto .campo-ancho,
+.registro-compacto .form-card > button,
+.registro-compacto .form-card > p { grid-column: 1 / -1; }
+.registro-compacto .form-card p { margin: 0; }
+.registro-compacto .form-card input { padding: 10px 12px; }
+
+/* Juego: Saturno permanece visible junto a la tarjeta blanca. */
+.juego-espacial main {
+    background: #000 url('../imagenes/saturno-4k.jpg') left center / auto 75% no-repeat;
+    padding: 35px 5%;
+}
+.juego-espacial .juego { margin: 0 0 0 auto; max-width: 650px; }
+.juego-espacial .juego > h1, .juego-espacial .juego > p { color: white; text-shadow: 0 2px 6px #000; }
+.juego-espacial .juego-tarjeta { margin-top: 20px; }
+
+/* En celular los campos vuelven a una columna y se permite bajar normalmente. */
+@media (max-width: 700px) {
+    .cabecera-espacial { min-height: 360px; padding: 40px 6%; background-position: center; background-size: auto 100%; align-items: end; }
+    .acceso-espacial .auth-shell { padding: 24px 5%; background-position: center top; }
+    .registro-compacto .auth-shell .form-card { grid-template-columns: 1fr; }
+    .acceso-espacial .auth-shell .form-card { padding: 24px; }
+    .juego-espacial main { padding: 30px 5%; background-position: center top; }
+}

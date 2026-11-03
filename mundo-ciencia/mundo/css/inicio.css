@@ -1,0 +1,619 @@
+/* ARCHIVO: css/inicio.css
+ * PÁGINA DE INICIO
+ * Portada, fotografías, curiosidades y accesos de inicio.php.
+ * Las clases .inicio-publico limitan estilos a la portada pública.
+ * background controla fondos; object-fit ajusta fotografías dentro de sus marcos.
+ */
+
+/* Inicio: introducción, fondo, carrusel y curiosidades. */
+/* Selector .home-intro: controla la introducción y el fondo del inicio público. */
+.home-intro {
+    /* Limita el ancho máximo. */
+    max-width: 760px;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 54px auto 38px;
+    /* Alinea el texto. */
+    text-align: center;
+}
+
+/* Selector .home-intro .eyebrow: controla la introducción y el fondo del inicio público. */
+.home-intro .eyebrow {
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 12px;
+}
+
+/* Selector .home-intro h1: controla la introducción y el fondo del inicio público. */
+.home-intro h1 {
+    /* Ajusta el tamaño de la letra. */
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 18px;
+}
+
+/* Selector .home-intro h1 span: controla la introducción y el fondo del inicio público. */
+.home-intro h1 span {
+    /* Define el color del texto o del icono. */
+    color: var(--green);
+}
+
+/* Selector .home-intro>p:last-child: controla la introducción y el fondo del inicio público. */
+.home-intro>p:last-child {
+    /* Limita el ancho máximo. */
+    max-width: 560px;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 0 auto;
+    /* Define el color del texto o del icono. */
+    color: var(--muted);
+    /* Ajusta el tamaño de la letra. */
+    font-size: clamp(.95rem, 1.5vw, 1.1rem);
+}
+
+/* Adaptación de pantalla: (max-width:700px). */
+@media(max-width:700px) {
+
+    /* Selector .home-intro: controla la introducción y el fondo del inicio público. Se aplica solo dentro de esta condición. */
+    .home-intro {
+        /* Separa el elemento de los elementos exteriores. */
+        margin: 34px auto 26px;
+    }
+}
+
+/* Selector .visually-hidden: controla la presentación general de las páginas. */
+.visually-hidden {
+    /* Define si sigue el flujo o se coloca respecto a otro contenedor o la pantalla. */
+    position: absolute;
+    /* Establece el ancho. */
+    width: 1px;
+    /* Establece la altura. */
+    height: 1px;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: -1px;
+    /* Controla el contenido que supera los límites. */
+    overflow: hidden;
+    /* Recorta visualmente el elemento; permite ocultar texto accesible sin eliminarlo. */
+    clip-path: inset(50%);
+    /* Controla los espacios y saltos de línea. */
+    white-space: nowrap;
+}
+
+/* Selector .inicio-publico: controla la introducción y el fondo del inicio público. */
+.inicio-publico {
+    /* Define el fondo: color, imagen o combinación. */
+    background: #eff7f9 url('../imagen_fondo.png') center top / cover fixed no-repeat;
+}
+
+/* Selector .inicio-publico .site-header: controla la introducción y el fondo del inicio público. */
+.inicio-publico .site-header {
+    /* Define el fondo: color, imagen o combinación. */
+    background: #ffffff;
+}
+
+/* Selector .fair-section: controla el carrusel del inicio y de Feria de Ciencia. */
+.fair-section {
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 30px auto 64px;
+    /* Establece el ancho. */
+    width: min(1200px, 90%);
+}
+
+/* Selector .carousel: controla el carrusel del inicio y de Feria de Ciencia. */
+.carousel {
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 12px;
+    /* Dibuja el contorno del elemento. */
+    border: 1px solid #d4e4e8;
+    /* Redondea las esquinas. */
+    border-radius: 24px;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #fff;
+    /* Añade profundidad mediante una sombra. */
+    box-shadow: 0 18px 50px #245c7810;
+    /* Controla el contenido que supera los límites. */
+    overflow: hidden;
+}
+
+/* Selector .slides: controla el carrusel del inicio y de Feria de Ciencia. */
+.slides {
+    /* Establece la altura. */
+    height: clamp(420px, 68vh, 760px);
+    /* Define el fondo: color, imagen o combinación. */
+    background: #eef5f3;
+    /* Redondea las esquinas. */
+    border-radius: 15px;
+    /* Controla el contenido que supera los límites. */
+    overflow: hidden;
+}
+
+/* Selector .slides img: controla el carrusel del inicio y de Feria de Ciencia. */
+.slides img {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: block;
+    /* Establece el ancho. */
+    width: 100%;
+    /* Establece la altura. */
+    height: 100%;
+    /* Ajusta una imagen dentro de su espacio sin deformarla. */
+    object-fit: contain;
+    /* Aplica la animación declarada. */
+    animation: appear .35s;
+}
+
+/* Selector .slides img[hidden]: controla el carrusel del inicio y de Feria de Ciencia. Mantiene ocultos los elementos que no deben mostrarse. */
+.slides img[hidden] {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: none;
+}
+
+/* Selector .carousel-controls: controla el carrusel del inicio y de Feria de Ciencia. */
+.carousel-controls {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Distribuye elementos a lo largo del eje principal. */
+    justify-content: space-between;
+    /* Separa los elementos de la distribución. */
+    gap: 18px;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 16px 10px 4px;
+}
+
+/* Selector .carousel-label: controla el carrusel del inicio y de Feria de Ciencia. */
+.carousel-label {
+    /* Define el color del texto o del icono. */
+    color: var(--ink);
+    /* Ajusta el tamaño de la letra. */
+    font-size: .85rem;
+    /* Ajusta el grosor de la letra. */
+    font-weight: 650;
+}
+
+/* Selector .carousel-buttons: controla el carrusel del inicio y de Feria de Ciencia. */
+.carousel-buttons {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Separa los elementos de la distribución. */
+    gap: 8px;
+}
+
+/* Selector .carousel-buttons .btn: controla el carrusel del inicio y de Feria de Ciencia. */
+.carousel-buttons .btn {
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 8px;
+    /* Establece el ancho mínimo. */
+    min-width: 44px;
+    /* Añade profundidad mediante una sombra. */
+    box-shadow: none;
+}
+
+/* Selector .dots: controla el carrusel del inicio y de Feria de Ciencia. */
+.dots {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Separa los elementos de la distribución. */
+    gap: 0;
+}
+
+/* Selector .dots button: controla el carrusel del inicio y de Feria de Ciencia. */
+.dots button {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Alinea los elementos en ambos ejes. */
+    place-items: center;
+    /* Dibuja el contorno del elemento. */
+    border: 0;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 0;
+    /* Establece el ancho. */
+    width: 28px;
+    /* Establece la altura. */
+    height: 44px;
+    /* Define el fondo: color, imagen o combinación. */
+    background: transparent;
+}
+
+/* Selector .dots button::after: controla el carrusel del inicio y de Feria de Ciencia. Afecta a una parte generada o decorativa. */
+.dots button::after {
+    /* Genera contenido decorativo o una etiqueta mediante un pseudoelemento. */
+    content: "";
+    /* Establece el ancho. */
+    width: 7px;
+    /* Establece la altura. */
+    height: 7px;
+    /* Redondea las esquinas. */
+    border-radius: 10px;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #b8ced2;
+}
+
+/* Selector .dots button[aria-current]::after: controla el carrusel del inicio y de Feria de Ciencia. Afecta a una parte generada o decorativa. */
+.dots button[aria-current]::after {
+    /* Establece el ancho. */
+    width: 20px;
+    /* Define el fondo: color, imagen o combinación. */
+    background: var(--green);
+}
+
+/* Selector .curiosity: controla las tarjetas giratorias de curiosidades. */
+.curiosity {
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 0;
+    /* Define el fondo: color, imagen o combinación. */
+    background: transparent;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 90px;
+}
+
+/* Selector .curiosity h2: controla las tarjetas giratorias de curiosidades. */
+.curiosity h2 {
+    /* Ajusta el tamaño de la letra. */
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+/* Selector .flip-card: controla las tarjetas giratorias de curiosidades. */
+.flip-card {
+    /* Establece la altura. */
+    height: 310px;
+    /* Da profundidad al giro de las tarjetas. */
+    perspective: 1000px;
+    /* Elige el cursor que indica la interacción. */
+    cursor: pointer;
+    /* Separa el indicador de foco del borde. */
+    outline-offset: 5px;
+}
+
+/* Selector .flip-inner: controla las tarjetas giratorias de curiosidades. */
+.flip-inner {
+    /* Define si sigue el flujo o se coloca respecto a otro contenedor o la pantalla. */
+    position: relative;
+    /* Establece el ancho. */
+    width: 100%;
+    /* Establece la altura. */
+    height: 100%;
+    /* Suaviza el cambio entre estados visuales. */
+    transition: transform 1.0s;
+    /* Permite conservar el efecto tridimensional. */
+    transform-style: preserve-3d;
+}
+
+/* Selector .flip-front, .flip-back: controla las tarjetas giratorias de curiosidades. */
+.flip-front,
+.flip-back {
+    /* Define si sigue el flujo o se coloca respecto a otro contenedor o la pantalla. */
+    position: absolute;
+    /* Fija la distancia a los límites del contenedor o de la pantalla. */
+    inset: 0;
+    /* Oculta o muestra la cara posterior al girar. */
+    backface-visibility: hidden;
+    /* Redondea las esquinas. */
+    border-radius: 20px;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 28px;
+    /* Dibuja el contorno del elemento. */
+    border: 1px solid #d4e4e8;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #fff;
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Organiza los elementos en fila o columna. */
+    flex-direction: column;
+    /* Distribuye elementos a lo largo del eje principal. */
+    justify-content: center;
+    /* Alinea elementos en el eje transversal. */
+    align-items: flex-start;
+}
+
+/* Selector .flip-front>img: controla las tarjetas giratorias de curiosidades. */
+.flip-front>img {
+    /* Establece la altura. */
+    height: 90px;
+    /* Establece el ancho. */
+    width: 100%;
+    /* Ajusta una imagen dentro de su espacio sin deformarla. */
+    object-fit: cover;
+    /* Redondea las esquinas. */
+    border-radius: 12px;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 16px;
+}
+
+/* Selector .science-art: controla las tarjetas giratorias de curiosidades. */
+.science-art {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Alinea los elementos en ambos ejes. */
+    place-items: center;
+    /* Establece la altura. */
+    height: 62px;
+    /* Establece el ancho. */
+    width: 62px;
+    /* Redondea las esquinas. */
+    border-radius: 18px;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #e7f2f4;
+    /* Define el color del texto o del icono. */
+    color: var(--blue);
+    /* Ajusta el tamaño de la letra. */
+    font-size: 2.5rem;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 24px;
+}
+
+/* Selector .flip-front h3: controla las tarjetas giratorias de curiosidades. */
+.flip-front h3 {
+    /* Ajusta el tamaño de la letra. */
+    font-size: 1.35rem;
+}
+
+/* Selector .flip-front .eyebrow: controla las tarjetas giratorias de curiosidades. */
+.flip-front .eyebrow {
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 10px;
+}
+
+/* Selector .flip-front .meta: controla las tarjetas giratorias de curiosidades. */
+.flip-front .meta {
+    /* Ajusta el tamaño de la letra. */
+    font-size: .75rem;
+}
+
+/* Selector .flip-back: controla las tarjetas giratorias de curiosidades. */
+.flip-back {
+    /* Gira, desplaza o transforma visualmente el elemento. */
+    transform: rotateY(180deg);
+    /* Define el fondo: color, imagen o combinación. */
+    background: #e9f4f1;
+    /* Define el color del contorno. */
+    border-color: #bad8cf;
+    /* Define el color del texto o del icono. */
+    color: #244c43;
+}
+
+/* Selector .flip-back p: controla las tarjetas giratorias de curiosidades. */
+.flip-back p {
+    /* Ajusta el tamaño de la letra. */
+    font-size: .92rem;
+}
+
+/* Selector .flip-card.flipped .flip-inner: controla las tarjetas giratorias de curiosidades. */
+.flip-card.flipped .flip-inner {
+    /* Gira, desplaza o transforma visualmente el elemento. */
+    transform: rotateY(180deg);
+}
+
+/* Adaptación de pantalla: (hover:hover). */
+@media(hover:hover) {
+
+    /* Selector .flip-card:hover .flip-inner: controla las tarjetas giratorias de curiosidades. Se aplica al pasar el cursor. Se aplica solo dentro de esta condición. */
+    .flip-card:hover .flip-inner {
+        /* Gira, desplaza o transforma visualmente el elemento. */
+        transform: rotateY(180deg);
+    }
+}
+
+/* Selector .flip-card:has(.flip-back a:focus-visible) .flip-inner: controla las tarjetas giratorias de curiosidades. Se aplica al recibir foco, por ejemplo con el teclado. */
+.flip-card:has(.flip-back a:focus-visible) .flip-inner {
+    /* Gira, desplaza o transforma visualmente el elemento. */
+    transform: rotateY(180deg);
+}
+
+/* Selector .robotics-fixed: controla el botón fijo de Robótica del inicio. */
+.robotics-fixed {
+    /* Define si sigue el flujo o se coloca respecto a otro contenedor o la pantalla. */
+    position: fixed;
+    /* Fija la distancia a los límites del contenedor o de la pantalla. */
+    left: 16px;
+    /* Fija la distancia a los límites del contenedor o de la pantalla. */
+    bottom: 24px;
+    /* Establece el orden de superposición. */
+    z-index: 25;
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Separa los elementos de la distribución. */
+    gap: 8px;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 10px 15px;
+    /* Redondea las esquinas. */
+    border-radius: 30px;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #245c78;
+    /* Define el color del texto o del icono. */
+    color: #fff;
+    /* Añade profundidad mediante una sombra. */
+    box-shadow: 0 5px 18px #15324325;
+    /* Ajusta el tamaño de la letra. */
+    font-size: .8rem;
+    /* Ajusta el grosor de la letra. */
+    font-weight: 650;
+}
+
+/* Selector .robotics-fixed>span:first-child: controla el botón fijo de Robótica del inicio. */
+.robotics-fixed>span:first-child {
+    /* Ajusta el tamaño de la letra. */
+    font-size: 1.4rem;
+    /* Define la separación entre líneas. */
+    line-height: 1;
+}
+
+/* Selector .robotics-fixed:hover: controla el botón fijo de Robótica del inicio. Se aplica al pasar el cursor. */
+.robotics-fixed:hover {
+    /* Define el fondo: color, imagen o combinación. */
+    background: #1d4b62;
+    /* Añade o elimina el subrayado. */
+    text-decoration: none;
+}
+
+/* Selector .robotics-banner: controla la presentación del Club de Robótica. */
+.robotics-banner {
+    /* Define el fondo: color, imagen o combinación. */
+    background: #e9f4f1;
+}
+
+
+/* PORTADA NUEVA: estos estilos solo afectan al inicio público. */
+.inicio-publico {
+    background: #f5f8fb;
+}
+
+.inicio-publico .site-header {
+    background: #10182c;
+    border-bottom: 1px solid #26344c;
+}
+
+.inicio-publico .brand,
+.inicio-publico .top-nav>a {
+    color: #fff;
+}
+
+.inicio-publico .brand-green {
+    color: #85dddb;
+}
+
+.inicio-publico .menu-toggle,
+.inicio-publico .top-nav>.btn-outline {
+    color: #fff;
+    border-color: #64748b;
+}
+
+.inicio-publico .top-nav>.btn-primary {
+    background: #236f80;
+}
+
+/* La imagen llena la portada y la capa oscura permite leer el título. */
+.portada-ciencia {
+    min-height: 86vh;
+    padding: 100px 24px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: white;
+    background: #08253c url('../imagenes/portada_laboratorio.png') center / cover;
+}
+
+.portada-ciencia h1 {
+    color: white;
+    font-size: clamp(3rem, 7vw, 7rem);
+    font-weight: 600;
+    letter-spacing: -.045em;
+}
+
+.portada-ciencia p {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+}
+
+.portada-ciencia .portada-etiqueta {
+    font-size: .75rem;
+    letter-spacing: .22em;
+    color: #b8ebe9;
+    margin-bottom: 25px;
+}
+
+.portada-bajar {
+    position: absolute;
+    bottom: 24px;
+    color: #8be6df;
+    font-size: 2rem;
+    padding: 5px 20px;
+}
+
+/* Fotografías debajo de la portada: tres columnas en computador. */
+.fotos-ciencia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    scroll-margin-top: 100px;
+}
+
+.fotos-ciencia figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    background: white;
+    border: 1px solid #dee6ee;
+}
+
+.fotos-ciencia img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: #eaf2f5;
+    display: block;
+}
+
+.fotos-ciencia figcaption {
+    padding: 22px;
+}
+
+.fotos-ciencia figcaption span {
+    font-size: .7rem;
+    letter-spacing: .12em;
+    color: #463575;
+}
+
+.fotos-ciencia h2 {
+    font-size: 1.35rem;
+    margin: 8px 0 0;
+}
+
+/* En celulares el menú conserva el fondo oscuro y las fotos se apilan. */
+@media (max-width: 1000px) {
+    .inicio-publico .top-nav {
+        background: #10182c;
+    }
+}
+
+@media (max-width: 700px) {
+    .portada-ciencia {
+        min-height: 65vh;
+        padding: 90px 22px;
+    }
+
+    .fotos-ciencia {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Botón del menú móvil: contraste claro sobre fondo oscuro. */
+.inicio-publico .menu-toggle {
+    background: transparent;
+}
+
+/* Acceso de sesión legible dentro del menú oscuro. */
+.inicio-publico .top-nav>.btn-outline {
+    background: transparent;
+}
+
+/* Sombra solo en las letras: la fotografía mantiene sus colores. */
+.portada-ciencia h1, .portada-ciencia p { text-shadow: 0 2px 12px #000, 0 1px 4px #000; }
+/* Tarjetas de curiosidades con fotografía grande en la cara delantera.
+   Se muestran en Inicio, Datos y los paneles que llaman a datos_cards(). */
+.flip-card.flip-con-imagen {
+    height: 430px;
+}
+.flip-con-imagen .flip-front {
+    padding: 222px 24px 24px;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.flip-con-imagen .flip-front > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0;
+    margin: 0;
+}
+.flip-con-imagen .flip-front .meta {
+    margin-top: auto;
+}
+/* La respuesta puede desplazarse si se escribe un texto especialmente largo. */
+.flip-con-imagen .flip-back {
+    overflow-y: auto;
+}

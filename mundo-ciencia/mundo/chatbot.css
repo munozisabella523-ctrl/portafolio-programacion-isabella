@@ -1,0 +1,106 @@
+/* ARCHIVO: chatbot.css
+ * ESTILOS DEL CHATBOT
+ * Este archivo se conserva. El widget compartido actual usa css/chat_inicio.css;
+ * el contenido interior del asistente tiene sus estilos en chat.php.
+ */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eaf7ff;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background: #087fba;
+    color: white;
+    padding: 18px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.chat-header span {
+    display: block;
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.bot-message,
+.user-message {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    max-width: 90%;
+    line-height: 1.5;
+    white-space: normal;
+}
+
+.bot-message {
+    background: #e2f4ff;
+    color: #123;
+}
+
+.user-message {
+    background: #d7f5d9;
+    margin-left: auto;
+}
+
+.error-message {
+    background: #ffe1e1;
+    color: #a00;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.chat-form {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.chat-form button {
+    background: #087fba;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 15px;
+    cursor: pointer;
+}
+
+.chat-form button:hover {
+    background: #065f8c;
+}

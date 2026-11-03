@@ -1,0 +1,288 @@
+/* ARCHIVO: css/footer.css
+ * PIE DE PÁGINA
+ * Estilos de includes/pie_pagina.php: marca, enlaces y contactos.
+ * .site-footer es el contenedor; .footer-content distribuye sus columnas.
+ * Las reglas @media reorganizan el contenido en pantallas pequeñas.
+ */
+
+/* Pie de página compartido. */
+/* El logo mantiene contraste sobre el footer claro, también en Inicio. */
+.site-footer .brand {
+    color: var(--ink);
+}
+.site-footer .brand-green {
+    color: var(--green);
+}
+.site-footer .brand-mark {
+    color: #fff;
+}
+/* Selector .site-footer: controla el footer y sus enlaces de contacto. */
+.site-footer {
+    /* Define el fondo: color, imagen o combinación. */
+    background: #f8fcfd;
+    /* Ajusta el borde del lado o eje indicado. */
+    border-top: 1px solid #d4e4e8;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 42px 5% 22px;
+}
+
+/* Selector .footer-content: controla el footer y sus enlaces de contacto. */
+.footer-content {
+    /* Establece el ancho. */
+    width: min(1200px, 100%);
+    /* Separa el elemento de los elementos exteriores. */
+    margin: auto;
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Define las columnas de la cuadrícula. */
+    grid-template-columns: 1.4fr .7fr 1fr;
+    /* Separa los elementos de la distribución. */
+    gap: 40px;
+}
+
+/* Selector .footer-content p: controla el footer y sus enlaces de contacto. */
+.footer-content p {
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 16px 0 0;
+    /* Define el color del texto o del icono. */
+    color: var(--muted);
+    /* Ajusta el tamaño de la letra. */
+    font-size: .85rem;
+}
+
+/* Selector .footer-content h2: controla el footer y sus enlaces de contacto. */
+.footer-content h2 {
+    /* Ajusta el tamaño de la letra. */
+    font-size: .9rem;
+    /* Ajusta el espacio entre caracteres. */
+    letter-spacing: 0;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 15px;
+}
+
+/* Selector .footer-content nav, .footer-contact: controla el footer y sus enlaces de contacto. */
+.footer-content nav,
+.footer-contact {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Organiza los elementos en fila o columna. */
+    flex-direction: column;
+    /* Alinea elementos en el eje transversal. */
+    align-items: flex-start;
+    /* Separa los elementos de la distribución. */
+    gap: 10px;
+}
+
+/* Selector .footer-content a:not(.brand): controla el footer y sus enlaces de contacto. */
+.footer-content a:not(.brand) {
+    /* Ajusta el tamaño de la letra. */
+    font-size: .85rem;
+    /* Define el color del texto o del icono. */
+    color: var(--ink);
+}
+
+/* Selector .footer-contact a span: controla el footer y sus enlaces de contacto. */
+.footer-contact a span {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: block;
+    /* Define el color del texto o del icono. */
+    color: var(--muted);
+    /* Ajusta el tamaño de la letra. */
+    font-size: .7rem;
+}
+
+/* Selector .footer-bottom: controla el footer y sus enlaces de contacto. */
+.footer-bottom {
+    /* Establece el ancho. */
+    width: min(1200px, 100%);
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 30px auto 0;
+    /* Ajusta el espacio interior en el lado o eje indicado. */
+    padding-top: 20px;
+    /* Ajusta el borde del lado o eje indicado. */
+    border-top: 1px solid var(--line);
+    /* Define el color del texto o del icono. */
+    color: var(--muted);
+    /* Ajusta el tamaño de la letra. */
+    font-size: .72rem;
+    /* Alinea el texto. */
+    text-align: right;
+}
+
+/* Adaptación de pantalla: (max-width:700px). */
+@media(max-width:700px) {
+    /* Selector .inicio-publico: controla la introducción y el fondo del inicio público. Se aplica solo dentro de esta condición. */
+    .inicio-publico {
+        /* Determina si el fondo se desplaza con la página. */
+        background-attachment: scroll;
+        /* Controla el tamaño de la imagen de fondo. */
+        background-size: auto 100%;
+    }
+
+    /* Selector .fair-section: controla el carrusel del inicio y de Feria de Ciencia. Se aplica solo dentro de esta condición. */
+    .fair-section {
+        /* Separa el elemento de los elementos exteriores. */
+        margin: 20px auto 44px;
+        /* Establece el ancho. */
+        width: 94%;
+    }
+
+    /* Selector .carousel: controla el carrusel del inicio y de Feria de Ciencia. Se aplica solo dentro de esta condición. */
+    .carousel {
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 8px;
+        /* Redondea las esquinas. */
+        border-radius: 18px;
+    }
+
+    /* Selector .slides: controla el carrusel del inicio y de Feria de Ciencia. Se aplica solo dentro de esta condición. */
+    .slides {
+        /* Establece la altura. */
+        height: clamp(260px, 82vw, 420px);
+        /* Redondea las esquinas. */
+        border-radius: 12px;
+    }
+
+    /* Selector .carousel-controls: controla el carrusel del inicio y de Feria de Ciencia. Se aplica solo dentro de esta condición. */
+    .carousel-controls {
+        /* Separa los elementos de la distribución. */
+        gap: 5px;
+        /* Permite pasar elementos a otra fila. */
+        flex-wrap: wrap;
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 10px 4px 2px;
+    }
+
+    /* Selector .carousel-label: controla el carrusel del inicio y de Feria de Ciencia. Se aplica solo dentro de esta condición. */
+    .carousel-label {
+        /* Define cómo se distribuye o se oculta el elemento. */
+        display: none;
+    }
+
+    /* Selector .carousel-buttons: controla el carrusel del inicio y de Feria de Ciencia. Se aplica solo dentro de esta condición. */
+    .carousel-buttons {
+        /* Separa los elementos de la distribución. */
+        gap: 4px;
+    }
+
+    /* Selector .dots button: controla el carrusel del inicio y de Feria de Ciencia. Se aplica solo dentro de esta condición. */
+    .dots button {
+        /* Establece el ancho. */
+        width: 24px;
+    }
+
+    /* Selector .carousel-buttons .btn: controla el carrusel del inicio y de Feria de Ciencia. Se aplica solo dentro de esta condición. */
+    .carousel-buttons .btn {
+        /* Establece el ancho mínimo. */
+        min-width: 40px;
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 7px;
+    }
+
+    /* Selector .curiosity: controla las tarjetas giratorias de curiosidades. Se aplica solo dentro de esta condición. */
+    .curiosity {
+        /* Ajusta el espacio exterior en el lado o eje indicado. */
+        margin-bottom: 50px;
+    }
+
+    /* Selector .flip-card: controla las tarjetas giratorias de curiosidades. Se aplica solo dentro de esta condición. */
+    .flip-card {
+        /* Establece la altura. */
+        height: 285px;
+    }
+
+    /* Selector .footer-content: controla el footer y sus enlaces de contacto. Se aplica solo dentro de esta condición. */
+    .footer-content {
+        /* Define las columnas de la cuadrícula. */
+        grid-template-columns: 1fr 1fr;
+        /* Separa los elementos de la distribución. */
+        gap: 28px;
+    }
+
+    /* Selector .footer-content>div:first-child: controla el footer y sus enlaces de contacto. Se aplica solo dentro de esta condición. */
+    .footer-content>div:first-child {
+        /* Indica qué columnas ocupa el elemento. */
+        grid-column: 1/-1;
+    }
+
+    /* Selector .footer-contact a: controla el footer y sus enlaces de contacto. Se aplica solo dentro de esta condición. */
+    .footer-contact a {
+        /* Permite partir textos largos. */
+        overflow-wrap: anywhere;
+    }
+
+    /* Selector .footer-bottom: controla el footer y sus enlaces de contacto. Se aplica solo dentro de esta condición. */
+    .footer-bottom {
+        /* Alinea el texto. */
+        text-align: left;
+        /* Ajusta el espacio interior en el lado o eje indicado. */
+        padding-bottom: 64px;
+    }
+
+    /* Selector .robotics-fixed: controla el botón fijo de Robótica del inicio. Se aplica solo dentro de esta condición. */
+    .robotics-fixed {
+        /* Fija la distancia a los límites del contenedor o de la pantalla. */
+        left: 12px;
+        /* Fija la distancia a los límites del contenedor o de la pantalla. */
+        bottom: 16px;
+        /* Ajusta el tamaño de la letra. */
+        font-size: .75rem;
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 10px 12px;
+    }
+}
+
+/* Ilustración del club, conservada en su propia página. */
+/* Selector .robot-art: controla la presentación del Club de Robótica. */
+.robot-art {
+    /* Ajusta el tamaño de la letra. */
+    font-size: 8rem;
+    /* Define la separación entre líneas. */
+    line-height: 1;
+    /* Alinea el texto. */
+    text-align: center;
+    /* Define el color del texto o del icono. */
+    color: var(--green);
+}
+
+/* Selector .robot-art span: controla la presentación del Club de Robótica. */
+.robot-art span {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: block;
+    /* Define conjuntamente las características tipográficas. */
+    font: 650 .7rem/2 "Segoe UI", sans-serif;
+    /* Ajusta el espacio entre caracteres. */
+    letter-spacing: .1em;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-top: 20px;
+}
+
+/* Adaptación de pantalla: (max-width:700px). */
+@media(max-width:700px) {
+    /* Selector .robot-art: controla la presentación del Club de Robótica. Se aplica solo dentro de esta condición. */
+    .robot-art {
+        /* Ajusta el tamaño de la letra. */
+        font-size: 5rem;
+    }
+}
+
+/* Adaptación de pantalla: (max-width:700px). */
+@media(max-width:700px) {
+    /* Selector .robotics-fixed: controla el botón fijo de Robótica del inicio. Se aplica solo dentro de esta condición. */
+    .robotics-fixed {
+        /* Establece el ancho. */
+        width: 44px;
+        /* Establece la altura. */
+        height: 44px;
+        /* Distribuye elementos a lo largo del eje principal. */
+        justify-content: center;
+        /* Añade espacio entre el contenido y su borde. */
+        padding: 0;
+    }
+
+    /* Selector .robotics-fixed>span:last-child: controla el botón fijo de Robótica del inicio. Se aplica solo dentro de esta condición. */
+    .robotics-fixed>span:last-child {
+        /* Define cómo se distribuye o se oculta el elemento. */
+        display: none;
+    }
+}

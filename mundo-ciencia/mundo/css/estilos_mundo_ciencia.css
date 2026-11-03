@@ -1,0 +1,12 @@
+/* ARCHIVO: css/estilos_mundo_ciencia.css
+ * HOJA COMPLEMENTARIA DEL SITIO
+ * Se carga desde includes/encabezado.php junto con las hojas de cada módulo.
+ * Se conserva su nombre y posición para respetar el orden de los estilos.
+ */
+
+/* Las hojas CSS se cargan por separado desde includes/encabezado.php.
+   Cada una tiene una versión según su contenido para evitar la caché antigua.
+   Edita el archivo del apartado correspondiente (inicio.css, footer.css, etc.).
+   Este archivo se carga al final y puede usarse para ajustes generales adicionales.
+   Guarda con Ctrl + S y actualiza la página con F5 para ver los cambios.
+*/

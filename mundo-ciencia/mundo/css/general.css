@@ -1,0 +1,455 @@
+/* ARCHIVO: css/general.css
+ * BASE DEL SITIO
+ * Variables de color (:root), tipografía, menú, botones y formularios compartidos.
+ * Las variables --blue, --green y --ink se reutilizan con var(...).
+ * Las clases e identificadores coinciden con el HTML de includes/encabezado.php.
+ */
+
+/* Selector :root: controla la presentación general de las páginas. */
+/* ARCHIVO: css/general.css
+ * Define el aspecto de toda la plataforma. Cada selector identifica los elementos afectados.
+ * Las clases se aplican en los archivos PHP; estas reglas solo cambian su presentación.
+ */
+:root {
+    /* Color azul principal de enlaces y botones. */
+    --blue: #245c78;
+    /* Color verde de acentos y títulos. */
+    --green: #357567;
+    /* Color de acento secundario. */
+    --accent: #80b6b3;
+    /* Color principal del texto. */
+    --ink: #153243;
+    /* Color de textos secundarios. */
+    --muted: #547082;
+    /* Color de líneas y bordes. */
+    --line: #dce8e7;
+    /* Color de fondo general. */
+    --bg: #f7faff;
+    /* Sombra reutilizable de las tarjetas. */
+    --shadow: 0 12px 35px #15324309;
+    /* Redondeado común de esquinas. */
+    --radius: 20px;
+    /* Selecciona la familia de letra y sus alternativas. */
+    font-family: "Segoe UI", Arial, sans-serif;
+    /* Define el color del texto o del icono. */
+    color: var(--ink);
+    /* Controla si el navegador puede simular estilos de letra. */
+    font-synthesis: none
+}
+
+/* Selector *: controla la presentación general de las páginas. */
+* {
+    /* Determina cómo se cuentan relleno y bordes en el tamaño. */
+    box-sizing: border-box
+}
+
+/* Selector body: controla la presentación general de las páginas. */
+body {
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 0;
+    /* Define el fondo: color, imagen o combinación. */
+    background: var(--bg);
+    /* Define la separación entre líneas. */
+    line-height: 1.6
+}
+
+/* Selector a: controla la presentación general de las páginas. */
+a {
+    /* Define el color del texto o del icono. */
+    color: var(--blue);
+    /* Añade o elimina el subrayado. */
+    text-decoration: none
+}
+
+/* Selector a:hover: controla la presentación general de las páginas. Se aplica al pasar el cursor. */
+a:hover {
+    /* Añade o elimina el subrayado. */
+    text-decoration: underline
+}
+
+/* Selector img: controla la presentación general de las páginas. */
+img {
+    /* Limita el ancho máximo. */
+    max-width: 100%;
+    /* Establece la altura. */
+    height: auto
+}
+
+/* Selector button, input, select, textarea: controla los formularios de acceso, perfil y gestión. */
+button,
+input,
+select,
+textarea {
+    /* Define conjuntamente las características tipográficas. */
+    font: inherit
+}
+
+/* Selector button, a, input, textarea, select: controla los formularios de acceso, perfil y gestión. */
+button,
+a,
+input,
+textarea,
+select {
+    /* Controla los gestos táctiles permitidos. */
+    touch-action: manipulation
+}
+
+/* Selector button: controla la presentación general de las páginas. */
+button {
+    /* Elige el cursor que indica la interacción. */
+    cursor: pointer
+}
+
+/* Selector h1, h2, h3: controla la presentación general de las páginas. */
+h1,
+h2,
+h3 {
+    /* Define la separación entre líneas. */
+    line-height: 1.15;
+    /* Ajusta el espacio entre caracteres. */
+    letter-spacing: -.035em;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 0 0 18px;
+    /* Define el color del texto o del icono. */
+    color: var(--ink)
+}
+
+/* Selector h1: controla la presentación general de las páginas. */
+h1 {
+    /* Ajusta el tamaño de la letra. */
+    font-size: clamp(2.25rem, 4.8vw, 4.2rem)
+}
+
+/* Selector h2: controla la presentación general de las páginas. */
+h2 {
+    /* Ajusta el tamaño de la letra. */
+    font-size: clamp(1.65rem, 3vw, 2.6rem)
+}
+
+/* Selector h3: controla la presentación general de las páginas. */
+h3 {
+    /* Ajusta el tamaño de la letra. */
+    font-size: 1.25rem;
+    /* Ajusta el espacio entre caracteres. */
+    letter-spacing: -.015em
+}
+
+/* Selector p: controla la presentación general de las páginas. */
+p {
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 0 0 18px
+}
+
+/* Selector main: controla la presentación general de las páginas. */
+main {
+    /* Establece la altura mínima. */
+    min-height: 70vh
+}
+
+/* Selector .container: controla la distribución de secciones y tarjetas. */
+.container {
+    /* Establece el ancho. */
+    width: min(1200px, 90%);
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 64px auto
+}
+
+/* Selector .reading: controla la distribución de secciones y tarjetas. */
+.reading {
+    /* Limita el ancho máximo. */
+    max-width: 800px
+}
+
+/* Selector .site-header: controla el encabezado y la navegación compartida. */
+.site-header {
+    /* Establece la altura mínima. */
+    min-height: 92px;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 20px 4%;
+    /* Define el fondo: color, imagen o combinación. */
+    background: #fff;
+    /* Ajusta el borde del lado o eje indicado. */
+    border-bottom: 1px solid var(--line);
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Distribuye elementos a lo largo del eje principal. */
+    justify-content: space-between;
+    /* Separa los elementos de la distribución. */
+    gap: 28px;
+    /* Define si sigue el flujo o se coloca respecto a otro contenedor o la pantalla. */
+    position: sticky;
+    /* Fija la distancia a los límites del contenedor o de la pantalla. */
+    top: 0;
+    /* Establece el orden de superposición. */
+    z-index: 30;
+    /* Aplica un efecto al fondo situado detrás. */
+    backdrop-filter: blur(14px)
+}
+
+/* Selector .brand: controla el encabezado y la navegación compartida. */
+.brand {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: inline-flex;
+    /* Separa los elementos de la distribución. */
+    gap: 10px;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Ajusta el grosor de la letra. */
+    font-weight: 850;
+    /* Ajusta el tamaño de la letra. */
+    font-size: 1.2rem;
+    /* Define el color del texto o del icono. */
+    color: var(--ink);
+    /* Controla los espacios y saltos de línea. */
+    white-space: nowrap;
+    /* Define la separación entre líneas. */
+    line-height: 1.15
+}
+
+/* Selector .brand:hover: controla el encabezado y la navegación compartida. Se aplica al pasar el cursor. */
+.brand:hover {
+    /* Añade o elimina el subrayado. */
+    text-decoration: none
+}
+
+/* Selector .brand small: controla el encabezado y la navegación compartida. */
+.brand small {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: block;
+    /* Ajusta el tamaño de la letra. */
+    font-size: .52rem;
+    /* Ajusta el espacio entre caracteres. */
+    letter-spacing: .2em;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-top: 7px;
+    /* Define el color del texto o del icono. */
+    color: var(--muted)
+}
+
+/* Selector .brand-green: controla el encabezado y la navegación compartida. */
+.brand-green {
+    /* Define el color del texto o del icono. */
+    color: var(--green)
+}
+
+/* Selector .brand-mark: controla el encabezado y la navegación compartida. */
+.brand-mark {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: grid;
+    /* Alinea los elementos en ambos ejes. */
+    place-items: center;
+    /* Define el fondo: color, imagen o combinación. */
+    background: var(--blue);
+    /* Redondea las esquinas. */
+    border-radius: 13px;
+    /* Define el color del texto o del icono. */
+    color: white;
+    /* Ajusta el tamaño de la letra. */
+    font-size: 1.7rem;
+    /* Establece el ancho. */
+    width: 43px;
+    /* Establece la altura. */
+    height: 43px
+}
+
+/* Selector .top-nav: controla el encabezado y la navegación compartida. */
+.top-nav {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Separa los elementos de la distribución. */
+    gap: 20px;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Ajusta el tamaño de la letra. */
+    font-size: .83rem;
+    /* Ajusta el grosor de la letra. */
+    font-weight: 650
+}
+
+/* Selector .top-nav>a: controla el encabezado y la navegación compartida. */
+.top-nav>a {
+    /* Define el color del texto o del icono. */
+    color: var(--ink);
+    /* Controla los espacios y saltos de línea. */
+    white-space: nowrap
+}
+
+/* Selector .top-nav>a.btn-primary: controla el encabezado y la navegación compartida. */
+.top-nav>a.btn-primary {
+    /* Define el color del texto o del icono. */
+    color: white
+}
+
+/* Selector .btn: controla los botones compartidos. */
+.btn {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: inline-flex;
+    /* Separa los elementos de la distribución. */
+    gap: 8px;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Distribuye elementos a lo largo del eje principal. */
+    justify-content: center;
+    /* Establece la altura mínima. */
+    min-height: 44px;
+    /* Dibuja el contorno del elemento. */
+    border: 1px solid transparent;
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 11px 20px;
+    /* Redondea las esquinas. */
+    border-radius: 10px;
+    /* Ajusta el tamaño de la letra. */
+    font-size: .9rem;
+    /* Ajusta el grosor de la letra. */
+    font-weight: 700;
+    /* Define la separación entre líneas. */
+    line-height: 1.4;
+    /* Suaviza el cambio entre estados visuales. */
+    transition: transform .2s, box-shadow .2s, background .2s;
+    /* Añade o elimina el subrayado. */
+    text-decoration: none
+}
+
+/* Selector .btn:hover: controla los botones compartidos. Se aplica al pasar el cursor. */
+.btn:hover {
+    /* Gira, desplaza o transforma visualmente el elemento. */
+    transform: translateY(-2px);
+    /* Añade profundidad mediante una sombra. */
+    box-shadow: 0 5px 15px #15324315;
+    /* Añade o elimina el subrayado. */
+    text-decoration: none
+}
+
+/* Selector .btn-primary: controla los botones compartidos. */
+.btn-primary {
+    /* Define el fondo: color, imagen o combinación. */
+    background: var(--blue);
+    /* Define el color del texto o del icono. */
+    color: white
+}
+
+/* Selector .btn-primary:hover: controla los botones compartidos. Se aplica al pasar el cursor. */
+.btn-primary:hover {
+    /* Define el fondo: color, imagen o combinación. */
+    background: #104e96
+}
+
+/* Selector .btn-outline: controla los botones compartidos. */
+.btn-outline {
+    /* Define el fondo: color, imagen o combinación. */
+    background: white;
+    /* Define el color del contorno. */
+    border-color: #cedddb;
+    /* Define el color del texto o del icono. */
+    color: var(--ink)
+}
+
+/* Selector .btn-danger: controla los botones compartidos. */
+.btn-danger {
+    /* Define el fondo: color, imagen o combinación. */
+    background: #ad303a;
+    /* Define el color del texto o del icono. */
+    color: white
+}
+
+/* Selector .eyebrow: controla la presentación general de las páginas. */
+.eyebrow {
+    /* Ajusta el grosor de la letra. */
+    font-weight: 800;
+    /* Ajusta el tamaño de la letra. */
+    font-size: .68rem;
+    /* Ajusta el espacio entre caracteres. */
+    letter-spacing: .13em;
+    /* Define el color del texto o del icono. */
+    color: var(--green);
+    /* Cambia la presentación de mayúsculas y minúsculas. */
+    text-transform: uppercase;
+    /* Ajusta el espacio exterior en el lado o eje indicado. */
+    margin-bottom: 17px
+}
+
+/* Selector .card-actions: controla la presentación general de las páginas. */
+.card-actions {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Separa los elementos de la distribución. */
+    gap: 12px;
+    /* Alinea elementos en el eje transversal. */
+    align-items: center;
+    /* Permite pasar elementos a otra fila. */
+    flex-wrap: wrap
+}
+
+/* Selector .section-heading: controla la presentación general de las páginas. */
+.section-heading {
+    /* Define cómo se distribuye o se oculta el elemento. */
+    display: flex;
+    /* Alinea elementos en el eje transversal. */
+    align-items: end;
+    /* Distribuye elementos a lo largo del eje principal. */
+    justify-content: space-between;
+    /* Separa los elementos de la distribución. */
+    gap: 30px;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 0 0 26px
+}
+
+/* Selector .section-heading h2: controla la presentación general de las páginas. */
+.section-heading h2 {
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 0
+}
+
+/* Selector .section-heading p:not(.eyebrow): controla la presentación general de las páginas. */
+.section-heading p:not(.eyebrow) {
+    /* Limita el ancho máximo. */
+    max-width: 310px;
+    /* Define el color del texto o del icono. */
+    color: var(--muted);
+    /* Ajusta el tamaño de la letra. */
+    font-size: .87rem;
+    /* Separa el elemento de los elementos exteriores. */
+    margin: 0
+}
+
+/* Selector .section-heading>a: controla la presentación general de las páginas. */
+.section-heading>a {
+    /* Ajusta el tamaño de la letra. */
+    font-size: .85rem;
+    /* Ajusta el grosor de la letra. */
+    font-weight: 700;
+    /* Controla los espacios y saltos de línea. */
+    white-space: nowrap
+}
+
+/* Selector .info-card, .dashboard-card, .form-card, .stat-card, .comment-card, .notification-item: controla los contadores y gráficos del panel. */
+.info-card,
+.dashboard-card,
+.form-card,
+.stat-card,
+.comment-card,
+.notification-item {
+    /* Define el fondo: color, imagen o combinación. */
+    background: white;
+    /* Dibuja el contorno del elemento. */
+    border: 1px solid var(--line);
+    /* Redondea las esquinas. */
+    border-radius: var(--radius);
+    /* Añade espacio entre el contenido y su borde. */
+    padding: 25px;
+    /* Añade profundidad mediante una sombra. */
+    box-shadow: var(--shadow)
+}
+
+/* Selector .project-card:hover: controla las tarjetas y los listados de experimentos. Se aplica al pasar el cursor. */
+.project-card:hover {
+    /* Gira, desplaza o transforma visualmente el elemento. */
+    transform: translateY(-4px);
+    /* Añade profundidad mediante una sombra. */
+    box-shadow: 0 15px 32px #15324313;
+    /* Añade o elimina el subrayado. */
+    text-decoration: none
+}
+

@@ -1,0 +1,83 @@
+/* ARCHIVO: css/juego.css
+ * JUEGO DE PISTAS
+ * Presentación de juego.php. Las preguntas y puntuación se manejan en js/juego.js.
+ * Los selectores identifican la tarjeta, las opciones y los mensajes del juego.
+ */
+
+/* JUEGO: tarjeta, marcador y botones de juego.php. */
+.juego {
+    max-width: 760px;
+    text-align: center;
+}
+
+.juego h1 {
+    font-size: clamp(2rem, 5vw, 3.3rem);
+}
+
+.juego-tarjeta {
+    margin-top: 30px;
+    background: white;
+    border: 1px solid #dce8e7;
+    border-radius: 22px;
+    padding: clamp(22px, 5vw, 45px);
+    box-shadow: var(--shadow);
+}
+
+.juego-marcador {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: .9rem;
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+.juego-tarjeta h2 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.juego-opciones {
+    display: grid;
+    gap: 12px;
+}
+
+.juego-opciones button {
+    padding: 15px;
+    border: 1px solid #ccdce6;
+    border-radius: 10px;
+    background: #f5f8fb;
+    color: var(--ink);
+}
+
+.juego-opciones button:hover:not(:disabled) {
+    border-color: #245c78;
+    background: #e7f2f6;
+}
+
+/* El texto de respuesta también indica el resultado, sin depender del color. */
+.juego-opciones .correcta {
+    background: #e1f4e9;
+    border-color: #24734e;
+    color: #175136;
+}
+
+.juego-opciones .incorrecta {
+    background: #fce8e8;
+    border-color: #b94848;
+    color: #862828;
+}
+
+.juego-opciones button:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+.juego #respuesta {
+    margin: 22px 0;
+    min-height: 26px;
+}
+
+.juego [hidden] {
+    display: none;
+}
